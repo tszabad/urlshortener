@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+      <title>URL Shortener</title>
+      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="/public/style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <div class="container">
+        <h2>Tom's URL Shortener Microservice</h2>
+        <h3>Usage</h3>
+        <ol>
+          <li>You can enter a URL to <code>[project_url]/api/shorturl/new</code> and you will receive a shortened URL in the JSON response.<br>Example : <code>{"original_url":"www.google.com","short_url":VzwMqoJP1}</code></li>
+          <li>If you pass an invalid URL that doesn't follow the usual Url format, the response will give you an error.</li>
+          
+          <li>When you visit the shortened URL, it will redirect you to your original link.</li>
+        </ol>
+        
+        <h3>Please enter URL to create short url </h3>
+        <p>
+          example: https://www.google.com
+        </p>
+        <form action="api/shorturl/new" method="POST">
+          <label for="url_input">URL to be shortened</label>
+          <input id="url_input" type="text" name="url" value="https://www.freecodecamp.com">
+          <input type="submit" value="POST URL">
+        </form>
+        
+      </div>
+      <div class="footer">
+        <p>
+          by <a href="http://www.freecodecamp.com">freeCodeCamp</a>
+        </p>
+      </div>
+   </body>
+
+
+</html>
